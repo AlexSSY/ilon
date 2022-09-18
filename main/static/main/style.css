@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --var: #0f3;
+    --bg-medium: rgb(247, 175, 147);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./Roboto-Regular.ttf');
+}
+
+body {
+    font-family: 'Roboto-Regular', serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1340px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.header {
+    padding: 10px 0;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(176, 176, 176, 0.62);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(176, 176, 176, 0.62);
+    box-shadow: 0px 4px 5px 0px rgba(176, 176, 176, 0.62);
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__register a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    background: rgb(255, 0, 64);
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-weight: 600;
+}
+
+.margin-left-5 {
+    margin: 0 0 0 5px;
+}
+
+.section1 {
+    padding: 20px 0;
+}
+
+.section1__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section1__col {
+    flex: 0 1 50%;
+}
+
+.section1__video {
+    position: relative;
+}
+
+.section1__video video {
+    max-width: 780px;
+    height: 527px;
+}
+
+.caption {
+    margin: 30px 0;
+}
+
+.text-red {
+    color: red;
+}
+
+.form__control {
+    margin: 10px 0;
+}
+
+.form__control input {
+    padding: 0 0 0 10px;
+    border-radius: 57px;
+    width: 350px;
+    height: 48px;
+    border: none;
+    box-shadow: 0 0 2px 1px gray;
+}
+
+.btn-submit {
+    padding: 0 0 0 10px;
+    border-radius: 57px;
+    width: 350px;
+    height: 48px;
+    border: none;
+    box-shadow: 0 0 2px 1px red;
+    background: red;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.form-section {
+    padding: 50px 0;
+}
+
+.form-section__body {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background: var(--bg-medium);
+    padding: 50px 0 20px 0;
+}

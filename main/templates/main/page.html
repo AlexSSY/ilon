@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<section class="section1">
+    <div class="container">
+        <div class="section1__row">
+            <div class="section1__col">
+                <div class="caption">
+                    <h1>Присоединяйтесь к проэкту Илона Маска и зарабатывайте от 
+                        <img src="{% static 'main/4000.svg' %}" /> 
+                        <span class="text-red">ежемесячно!</span>
+                    </h1>
+                </div>
+                <h3>Откройте счет и начните зарабатывать</h3>
+                <div class="form">
+                    <form action="{% url 'main:send' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button class="btn-submit" type="submit">
+                            <img src="{% static 'main/icon-hand-money.svg' %}" /> Начать зарабатывать
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="section1__col">
+                <div class="section1__video">
+                    <video src="{% static 'main/main.mp4' %}" autoplay controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+<section></section>
+{% endblock %}

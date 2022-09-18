@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'main/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container">
+                    <div class="header__body">
+                        <div class="header__img">
+                            <a href="/">
+                                <img src="{% static 'main/logo.svg' %}" alt="{{title}}" />
+                            </a>
+                        </div>
+                        <div class="header__register">
+                            <a href="/">
+                                <img src="{% static 'main/icon-hand-money.svg' %}" />
+                                <span class="margin-left-5">Начать инвестировать</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer class="footer"></footer>
+    </div>
+</body>
+
+</html>

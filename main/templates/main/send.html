@@ -1,0 +1,22 @@
+{% extends "main/page.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="form-section">
+    <div class="container">
+        <div class="form-section__body">
+            <div class="form">
+                <form action="/" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn-submitt" type="submitt">
+                        <img src="{% static 'main/icon-hand-money.svg' %}" /> Начать зарабатывать
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
