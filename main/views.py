@@ -9,7 +9,7 @@ def send(request):
     if request.method == 'POST':
         form = MainForm(request.POST)
         if form.is_valid():
-            #form.save()
+            form.save()
             return redirect('main:success')
     else:
         form = MainForm()

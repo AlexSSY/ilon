@@ -7,10 +7,10 @@
     <div class="container">
         <div class="form-section__body">
             <div class="form">
-                <form action="/" method="POST">
+                <form  method="POST">
                     {% csrf_token %}
                     {{ form }}
-                    <button class="btn-submitt" type="submitt">
+                    <button class="btn-submit" type="submit">
                         <img src="{% static 'main/icon-hand-money.svg' %}" /> Начать зарабатывать
                     </button>
                 </form>

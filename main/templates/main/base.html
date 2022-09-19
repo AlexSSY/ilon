@@ -23,7 +23,7 @@
                             </a>
                         </div>
                         <div class="header__register">
-                            <a href="/">
+                            <a href="{% url 'main:send' %}">
                                 <img src="{% static 'main/icon-hand-money.svg' %}" />
                                 <span class="margin-left-5">Начать инвестировать</span>
                             </a>
@@ -34,7 +34,23 @@
             {% block content %}
             {% endblock %}
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__img">
+                        <a href="/">
+                            <img src="{% static 'main/logo.svg' %}" alt="{{title}}" />
+                        </a>
+                    </div>
+                    <div class="header__register">
+                        <a href="{% url 'main:send' %}">
+                            <img src="{% static 'main/icon-hand-money.svg' %}" />
+                            <span class="margin-left-5">Начать инвестировать</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 
