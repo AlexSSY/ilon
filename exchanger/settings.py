@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.1.7', '127.0.0.1']
 
+#Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.rambler.ru'
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'catcat1221@rambler.ru'
+EMAIL_HOST_PASSWORD = 'Qwerty123456@'
+
 # disable cache
 CACHES = {
     'default': {

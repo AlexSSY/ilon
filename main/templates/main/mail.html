@@ -1,0 +1,5 @@
+{% autoescape off %}
+Здравствуйте ,
+Пожалуйста перейдите по ссылке для активации вашего Email,
+http://{{ domain }}{% url 'main:confirm' personID=uid hash=token %}
+{% endautoescape %}
